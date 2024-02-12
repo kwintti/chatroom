@@ -1,0 +1,30 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "Simple chatroom.",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwintti/chatroom.git"
+  },
+  "keywords": [
+    "chatroom",
+    "boot.dev"
+  ],
+  "author": "Sergei Borovskii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwintti/chatroom/issues"
+  },
+  "homepage": "https://github.com/kwintti/chatroom#readme",
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "inquirer": "^9.2.14",
+    "sqlite3": "^5.1.7"
+  }
+}
