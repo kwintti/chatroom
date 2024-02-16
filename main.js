@@ -4,7 +4,7 @@ import { init_db, read_lines } from './comm_db.js'
 import boxen from 'boxen'
 //import { createReadStream } from 'node:fs';
 
-stdout.write(boxen(text, {fullscreen: (width, height) => [width, height - 5], padding: 1, title: 'CHATTING', titleAlignment: 'center'}))
+stdout.write(boxen("hello", {fullscreen: (width, height) => [width, height - 5], padding: 1, title: 'CHATTING', titleAlignment: 'center'}))
 console.log("\n")
 console.log("Sertsi >")
 //createReadStream('sample.txt', { start: 90, end: 99 })
