@@ -5,7 +5,6 @@ let sockets = []
 const server = net.createServer((c) => {
   // 'connection' listener.
   sockets.push(c)
-  console.log(sockets)
   console.log('client connected');
   c.setEncoding('utf8')
   c.on('end', () => {
@@ -13,7 +12,8 @@ const server = net.createServer((c) => {
   })
   //c.write('hello\r\n');
   c.on('data', data => {
-      init_db("sertsi", data.toString())
+      const splitedMsg = data.toString().split(">")
+      init_db(splitedMsg[0], splitedMsg[1])
       broadcast(data.toString())
   })
 })
@@ -21,7 +21,7 @@ server.on('error', (err) => {
   throw err;
 })
 server.listen(6969, () => {
-  console.log('server bound');
+  console.log('Server is ready for chatters!');
 })
 
 const broadcast = (msg) => {
